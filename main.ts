@@ -42,17 +42,17 @@ function Level () {
     100
     ]
     if (Lvl < Levels.length) {
+        if (Modes[Lvl] == 3) {
+            controller.moveSprite(mySprite, 100, 0)
+        } else {
+            controller.moveSprite(mySprite, 0, 0)
+        }
         tiles.setCurrentTilemap(Levels[Lvl])
         tiles.placeOnRandomTile(mySprite, assets.tile`miMosaico8`)
         tiles.setTileAt(mySprite.tilemapLocation(), assets.tile`transparency16`)
         mySprite.ay = ays[Lvl]
         mySprite.vx = vxs[Lvl]
         game.splash("Level:" + Lvl, Tipe[Lvl])
-        if (Modes[Lvl] == 3) {
-            controller.moveSprite(mySprite, 100, 0)
-        } else {
-            controller.moveSprite(mySprite, 0, 0)
-        }
     } else {
         game.reset()
     }
