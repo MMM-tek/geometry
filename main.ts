@@ -67,22 +67,22 @@ let mySprite: Sprite = null
 let Lvl = 0
 Lvl = 0
 mySprite = sprites.create(img`
-    f f f f f f f f f f f f f f f f 
-    f 7 7 7 7 7 7 7 7 7 7 7 7 7 7 f 
-    f 7 7 7 7 7 7 7 7 7 7 7 7 7 7 f 
-    f 7 7 7 7 7 7 7 7 7 7 7 7 7 7 f 
-    f 7 7 7 7 7 7 7 7 7 7 7 7 7 7 f 
-    f 7 7 7 7 7 7 7 7 7 7 7 7 7 7 f 
-    f 7 7 7 7 7 7 7 7 7 7 7 7 7 7 f 
-    f 7 7 7 7 7 7 7 7 7 7 7 7 7 7 f 
-    f 7 7 7 7 7 7 7 7 7 7 7 7 7 7 f 
-    f 7 7 7 7 7 7 7 7 7 7 7 7 7 7 f 
-    f 7 7 7 7 7 7 7 7 7 7 7 7 7 7 f 
-    f 7 7 7 7 7 7 7 7 7 7 7 7 7 7 f 
-    f 7 7 7 7 7 7 7 7 7 7 7 7 7 7 f 
-    f 7 7 7 7 7 7 7 7 7 7 7 7 7 7 f 
-    f 7 7 7 7 7 7 7 7 7 7 7 7 7 7 f 
-    f f f f f f f f f f f f f f f f 
+    7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+    7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+    7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+    7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+    7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+    7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+    7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+    7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+    7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+    7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+    7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+    7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+    7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+    7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+    7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+    7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
     `, SpriteKind.Player)
 scene.cameraFollowSprite(mySprite)
 Level()
@@ -118,5 +118,12 @@ game.onUpdate(function () {
     if (mySprite.tileKindAt(TileDirection.Center, assets.tile`miMosaico9`)) {
         Lvl += 1
         Level()
+    }
+})
+game.onUpdate(function () {
+    if (!(mySprite.isHittingTile(CollisionDirection.Bottom))) {
+        spriteFx.rotate(mySprite, 5)
+    } else {
+        spriteFx.setRotation(mySprite, 0)
     }
 })
