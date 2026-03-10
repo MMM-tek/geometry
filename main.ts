@@ -53,6 +53,7 @@ function Level () {
         if (!(Modes[Lvl] == 2)) {
             mySprite.ay = ays[Lvl]
         } else {
+            mySprite.ay = 0
             mySprite.vy = vys[Lvl]
         }
         mySprite.vx = vxs[Lvl]
@@ -128,6 +129,7 @@ game.onUpdate(function () {
         Level()
     }
     if (mySprite.tileKindAt(TileDirection.Center, assets.tile`miMosaico14`) || mySprite.tileKindAt(TileDirection.Center, assets.tile`miMosaico15`)) {
+        mySprite.ay = 0
         spriteFx.setRotation(mySprite, 0)
         _new = 2
         Modes[Lvl] = _new
@@ -138,6 +140,7 @@ game.onUpdate(function () {
         Modes[Lvl] = _new
     }
     if (mySprite.tileKindAt(TileDirection.Center, assets.tile`miMosaico18`) || mySprite.tileKindAt(TileDirection.Center, assets.tile`miMosaico19`)) {
+        mySprite.ay = ays[Lvl]
         spriteFx.setRotation(mySprite, 0)
         _new = 0
         Modes[Lvl] = _new
