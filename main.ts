@@ -61,6 +61,7 @@ function Level () {
         game.reset()
     }
 }
+let _new = 0
 let vxs: number[] = []
 let vys: number[] = []
 let ays: number[] = []
@@ -125,6 +126,99 @@ game.onUpdate(function () {
     if (mySprite.tileKindAt(TileDirection.Center, assets.tile`miMosaico9`)) {
         Lvl += 1
         Level()
+    }
+    if (mySprite.tileKindAt(TileDirection.Center, assets.tile`miMosaico14`) || mySprite.tileKindAt(TileDirection.Center, assets.tile`miMosaico15`)) {
+        spriteFx.setRotation(mySprite, 0)
+        _new = 2
+        Modes[Lvl] = _new
+    }
+    if (mySprite.tileKindAt(TileDirection.Center, assets.tile`miMosaico16`) || mySprite.tileKindAt(TileDirection.Center, assets.tile`miMosaico17`)) {
+        spriteFx.setRotation(mySprite, 0)
+        _new = 1
+        Modes[Lvl] = _new
+    }
+    if (mySprite.tileKindAt(TileDirection.Center, assets.tile`miMosaico18`) || mySprite.tileKindAt(TileDirection.Center, assets.tile`miMosaico19`)) {
+        spriteFx.setRotation(mySprite, 0)
+        _new = 0
+        Modes[Lvl] = _new
+    }
+    if (Modes[Lvl] == 2) {
+        mySprite.ay = 0
+    }
+    if (mySprite.tileKindAt(TileDirection.Center, assets.tile`miMosaico14`) || mySprite.tileKindAt(TileDirection.Center, assets.tile`miMosaico15`)) {
+        spriteFx.setRotation(mySprite, 0)
+        _new = 2
+        Modes[Lvl] = _new
+    }
+    if (mySprite.tileKindAt(TileDirection.Center, assets.tile`miMosaico16`) || mySprite.tileKindAt(TileDirection.Center, assets.tile`miMosaico17`)) {
+        spriteFx.setRotation(mySprite, 0)
+        _new = 1
+        Modes[Lvl] = _new
+    }
+    if (mySprite.tileKindAt(TileDirection.Center, assets.tile`miMosaico18`) || mySprite.tileKindAt(TileDirection.Center, assets.tile`miMosaico19`)) {
+        spriteFx.setRotation(mySprite, 0)
+        _new = 0
+        Modes[Lvl] = _new
+    }
+    if (mySprite.tileKindAt(TileDirection.Center, assets.tile`miMosaico14`) || mySprite.tileKindAt(TileDirection.Center, assets.tile`miMosaico15`)) {
+        spriteFx.setRotation(mySprite, 0)
+        _new = 2
+        Modes[Lvl] = _new
+    }
+    if (mySprite.tileKindAt(TileDirection.Center, assets.tile`miMosaico16`) || mySprite.tileKindAt(TileDirection.Center, assets.tile`miMosaico17`)) {
+        spriteFx.setRotation(mySprite, 0)
+        _new = 1
+        Modes[Lvl] = _new
+    }
+    if (mySprite.tileKindAt(TileDirection.Center, assets.tile`miMosaico18`) || mySprite.tileKindAt(TileDirection.Center, assets.tile`miMosaico19`)) {
+        spriteFx.setRotation(mySprite, 0)
+        _new = 0
+        Modes[Lvl] = _new
+    }
+    if (mySprite.tileKindAt(TileDirection.Center, assets.tile`miMosaico14`) || mySprite.tileKindAt(TileDirection.Center, assets.tile`miMosaico15`)) {
+        spriteFx.setRotation(mySprite, 0)
+        _new = 2
+        Modes[Lvl] = _new
+    }
+    if (mySprite.tileKindAt(TileDirection.Center, assets.tile`miMosaico16`) || mySprite.tileKindAt(TileDirection.Center, assets.tile`miMosaico17`)) {
+        spriteFx.setRotation(mySprite, 0)
+        _new = 1
+        Modes[Lvl] = _new
+    }
+    if (mySprite.tileKindAt(TileDirection.Center, assets.tile`miMosaico18`) || mySprite.tileKindAt(TileDirection.Center, assets.tile`miMosaico19`)) {
+        spriteFx.setRotation(mySprite, 0)
+        _new = 0
+        Modes[Lvl] = _new
+    }
+    if (mySprite.tileKindAt(TileDirection.Center, assets.tile`miMosaico14`) || mySprite.tileKindAt(TileDirection.Center, assets.tile`miMosaico15`)) {
+        spriteFx.setRotation(mySprite, 0)
+        _new = 2
+        Modes[Lvl] = _new
+    }
+    if (mySprite.tileKindAt(TileDirection.Center, assets.tile`miMosaico16`) || mySprite.tileKindAt(TileDirection.Center, assets.tile`miMosaico17`)) {
+        spriteFx.setRotation(mySprite, 0)
+        _new = 1
+        Modes[Lvl] = _new
+    }
+    if (mySprite.tileKindAt(TileDirection.Center, assets.tile`miMosaico18`) || mySprite.tileKindAt(TileDirection.Center, assets.tile`miMosaico19`)) {
+        spriteFx.setRotation(mySprite, 0)
+        _new = 0
+        Modes[Lvl] = _new
+    }
+    if (mySprite.tileKindAt(TileDirection.Center, assets.tile`miMosaico14`) || mySprite.tileKindAt(TileDirection.Center, assets.tile`miMosaico15`)) {
+        spriteFx.setRotation(mySprite, 0)
+        _new = 2
+        Modes[Lvl] = _new
+    }
+    if (mySprite.tileKindAt(TileDirection.Center, assets.tile`miMosaico16`) || mySprite.tileKindAt(TileDirection.Center, assets.tile`miMosaico17`)) {
+        spriteFx.setRotation(mySprite, 0)
+        _new = 1
+        Modes[Lvl] = _new
+    }
+    if (mySprite.tileKindAt(TileDirection.Center, assets.tile`miMosaico18`) || mySprite.tileKindAt(TileDirection.Center, assets.tile`miMosaico19`)) {
+        spriteFx.setRotation(mySprite, 0)
+        _new = 0
+        Modes[Lvl] = _new
     }
 })
 game.onUpdate(function () {
